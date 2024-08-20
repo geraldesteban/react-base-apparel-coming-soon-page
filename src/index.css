@@ -1,13 +1,149 @@
-body {
+* {
+  font-family: "Josefin Sans", sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card {
+  background: url(/public/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+}
+
+.left {
+  padding: 5rem 25rem 10rem 10rem;
+}
+
+.logo-image {
+  margin-bottom: 10rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.title span {
+  font-size: 5rem;
+  font-weight: lighter;
+  letter-spacing: 1.5rem;
+}
+
+.title span:first-child {
+  color: hsl(0, 36%, 70%);
+}
+
+.description {
+  color: hsl(0, 36%, 70%);
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 4rem;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-email {
+  border: 1px solid hsl(0, 16%, 44%);
+  border-radius: 5rem;
+  width: 100%;
+  padding: 1.2rem 1rem 1.2rem 2rem;
+}
+
+.input-email::placeholder {
+  color: hsl(0, 6%, 24%);
+  font-size: 1rem;
+}
+
+.input-error {
+  border: 1px solid hsl(0, 93%, 68%);
+}
+
+.error-icon {
+  position: absolute;
+  right: 6rem;
+}
+
+.error-message {
+  color: hsl(0, 93%, 68%);
+  margin-left: 2rem;
+}
+
+.valid-message {
+  color: green;
+  margin-left: 2rem;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  position: absolute;
+  right: -0.9rem;
+  border: none;
+  border-radius: 5rem;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.hero-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1600px) {
+  .left {
+    padding: 5rem 15rem 10rem 10rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    flex-direction: column-reverse;
+  }
+
+  .left {
+    padding: 10rem 2.5rem 10rem 2.5rem;
+  }
+
+  .title span {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .logo-image {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .left {
+    padding: 2rem 0rem 2rem 0rem;
+  }
+
+  .hero-mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  .content {
+    margin: 0rem 2rem;
+  }
+
+  .hero-image {
+    display: none;
+  }
 }
